@@ -1,0 +1,243 @@
+body {
+    text-align: center;
+    background-color: rgb(16, 3, 29);
+    color: White;
+}
+
+h1 {
+    font-family: 'Lucida Sans';
+    font-size: 40px;
+}
+
+.game-container {
+    display: flex;
+    position: relative;
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+    background-image: url("../img/fond.png");
+    background-size: cover;
+}
+
+.A,
+.Z,
+.E,
+.R {
+    display: flex;
+    position: relative;
+    width: 100px;
+    height : 100%;
+}
+
+.A {
+    background-color:rgba(171, 255, 46, 0.3);
+}
+
+.Z {
+    background-color:rgba(224, 18, 59, 0.3);
+}
+
+.E {
+    background-color:rgba(0, 255, 170, 0.3);
+}
+
+.R {
+    background-color: rgba(255, 255, 0, 0.3);
+}
+
+.fretboardA,
+.fretboardZ,
+.fretboardE,
+.fretboardR {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+    z-index: 1;
+    display: flex;
+    color: White;
+    font-weight: bold;
+    font-family: Lucida Sans ;
+    font-size: 40px;
+    margin: auto 0;
+}
+
+.fretboardA p,
+.fretboardZ p,
+.fretboardE p,
+.fretboardR p {
+    margin: auto;
+}
+
+.fretboardA {
+    background-color: #2B934D;
+}
+
+.fretboardZ {
+    background-color: #C10C0C;
+}
+
+.fretboardE {
+    background-color: #1481E2;
+}
+
+.fretboardR {
+    background-color: #FFA300;
+}
+
+.notesA,
+.notesZ,
+.notesE,
+.notesR {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.note {
+    display: flex;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    z-index: 0;
+    transition: top linear;
+}
+
+.notesA .note {
+    left: 0;
+    background-image: url("../img/vert.png");
+    background-size: cover;
+    opacity: 100%;
+}
+
+.notesZ .note {
+    left: 25%;
+    background-image: url("../img/rouge.png");
+    background-size: cover;
+}
+
+.notesE .note {
+    left: 50%;
+    background-image: url("../img/bleu.png");
+    background-size: cover;
+}
+
+.notesR .note {
+    left: 75%;
+    background-image: url("../img/jaune.png");
+    background-size: cover;
+}
+
+.note.active {
+    transition: none;
+}
+
+.fretboardA.glow{
+    box-shadow: 0 0 10px 5px #2B934D;
+}
+
+.fretboardZ.glow{
+    box-shadow: 0 0 10px 5px #C10C0C;
+}
+
+.fretboardE.glow{
+    box-shadow: 0 0 10px 5px #1481E2;
+}
+
+.fretboardR.glow{
+    box-shadow: 0 0 10px 5px #FFA300;
+}
+
+.info-container {
+    font-family: 'Lucida Sans';
+    position: absolute;
+    top: 150px;
+    left: 150px;
+}
+
+.info-container div {
+    font-size: 40px;
+    text-align: left;
+    margin-bottom: 150px;
+}
+
+.start-button {
+    visibility: visible;
+    position: absolute;
+    font-family: Lucida Sans;
+    font-size: 25px;
+    background-color: aquamarine;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 6px 12px;
+}
+
+.start-button:hover {
+    background-color: aqua;
+    box-shadow: 4px 2px 2px black;
+}
+
+.start-button.hidden {
+    visibility: hidden;
+}
+
+.play-again {
+    visibility: hidden;
+    position: absolute;
+    font-family: Lucida Sans;
+    font-size: 25px;
+    background-color: aquamarine;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 6px 12px;
+}
+
+.play-again.visible:hover {
+    background-color: aqua;
+    box-shadow: 4px 2px 2px black;
+}
+
+.play-again.visible {
+    visibility: visible;
+}
+
+.back-button {
+    visibility: hidden;
+    position: absolute;
+    font-family: Lucida Sans;
+    font-size: 25px;
+    background-color: aquamarine;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 6px 12px;
+}
+
+.back-button.visible:hover {
+    background-color: aqua;
+    box-shadow: 4px 2px 2px black;
+}
+
+.back-button.visible {
+    visibility: visible;
+}
+
+
+.game-over {
+    visibility: hidden;
+    position: absolute;
+    font-family: 'Lucida Sans';
+    font-size: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.game-over.visible {
+    visibility: visible;
+}

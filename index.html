@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chaussettes vertes</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/var.css">
+    <link rel="stylesheet" href="css/main.css">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+
+<body>
+    <h1>Chaussettes vertes</h1>
+    <h2>Score : <span id="score">0</span></h2>
+
+    <main>
+        <div class="fin">
+            <h2>GAME OVER</h2>
+            <p>Please pay developers if you want them to finish the game. Developped in 9 hours.</p>
+        </div>      
+
+        <div class="theme themedisplay" id="accueil">
+            <h3>Choix du thème</h3>
+            <ul>
+                <li>
+                    <button onclick="theme('dystopique')">Dystopique</button>
+                </li>
+                <li>
+                    <button onclick="theme('normal')">Normal</button>
+                </li>
+                <li>
+                    <button onclick="theme('utopique')">Utopique</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="pop-up messageHide" id="message">
+            <div class="quizz displayquizz">
+                <p>Oh non ! Des déchets ! Choisis la bonne poubelle où mettre cette <b>brique de lait en carton</b></p>
+                <div id="choice">
+                    <button onclick="Quizz1Error()">Verre</button>
+                    <button onclick="Quizz1Error()">Composte</button>
+                    <button onclick="CrampteyMonster()">Tri sélectif</button>
+                    <button onclick="Quizz1Error()">Ordures ménagères</button>
+                </div>
+            </div>
+            <div class="quizz1">
+                <p><b>Bravo ! Tu as choisi la bonne poubelle !</b> <br> <br>Mettre en place des composteurs pour traiter les déchets organiques et produire du compost pour l'agriculture ou le jardinage.
+                    Opter pour des produits avec moins d'emballages et éviter les articles sur-emballés. Les emballages représentent environ 40 % de tous les déchets générés dans le monde. https://www.science.org/doi/10.1126/sciadv.1700782
+                    Encourager la réparation des objets plutôt que leur remplacement, et promouvoir la réutilisation des articles encore en bon état.
+                    </p>
+                <button id="continue" onclick="continuer()">Continuer</button>
+            </div>
+            <div class="mauvaiserep">
+                <p><b>Oupsss ! Mauvaise réponse ! Jean-Marc l'écolo va se facher !!</b> <br><br> Mettre en place des composteurs pour traiter les déchets organiques et produire du compost pour l'agriculture ou le jardinage.
+                    Opter pour des produits avec moins d'emballages et éviter les articles sur-emballés. Les emballages représentent environ 40 % de tous les déchets générés dans le monde. https://www.science.org/doi/10.1126/sciadv.1700782
+                    Encourager la réparation des objets plutôt que leur remplacement, et promouvoir la réutilisation des articles encore en bon état.
+                    </p>
+                <button id="continue" onclick="continuer()">Continuer</button>
+            </div>
+            <div class="quizzvache">
+                <p>Oh une belle vache ! Que faire pour <b>le bien de celle-ci</b> ?</p>
+                <div id="choice">
+                    <button onclick="bonvache()">La laisser tranquille</button>
+                    <button onclick="Quizz2Error()">La manger</button>
+                </div>
+            </div>
+            <div class="mauvaiserepcow">
+                <p><b>Oupsss ! Mauvaise réponse ! Jean-Marc l'écolo va se facher !!</b> <br><br> En France, l'élevage est à l'origine de 80% des gazs à effet de serre de l'agriculture
+                    Ainsi il est plus qu'important de réduire sa consommation de viande et privilégier une viande de meilleure qualité
+                    Privilégier les produits locaux et de saison pour réduire l'empreinte carbone liée au transport.
+                    Favoriser les repas à base de plantes riches en protéines et nécessitant moins d'eau
+                    </p>
+                <button id="continue" onclick="continuervache()">Continuer</button>
+            </div>
+            <div class="quizz2">
+                <p><b>Bravo ! Très bonne réponse, elle vivra une vie paisible et aura des tonnes de bébés vaches</b> <br> <br> En France, l'élevage est à l'origine de 80% des gazs à effet de serre de l'agriculture
+                    Ainsi il est plus qu'important de réduire sa consommation de viande et privilégier une viande de meilleure qualité
+                    Privilégier les produits locaux et de saison pour réduire l'empreinte carbone liée au transport.
+                    Favoriser les repas à base de plantes riches en protéines et nécessitant moins d'eau
+                    </p>
+                <button id="continue" onclick="continuervache()">Continuer</button>
+            </div>
+        </div>
+
+        <div class="pop-up" id="back-message">
+            <img src="img/warning.png">
+            <h3>Ne fuyez pas vos responsabilités...</h3>
+            <p>On ne peut nier le réchauffement climatique alors allons de l'avant (et avec le bon véhicule !!)</p>
+        </div>
+        <img class="player" src="img/perso.png" />
+        <img class="player walk hide" src="img/walk.gif" />
+        <img id="cow" src="img/cow.png" />
+        <img id="poubelle" src="img/poubelle.png" />
+        <div id="game-bg"></div>
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

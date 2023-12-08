@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  background-color: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+h1 {
+  margin-bottom: 30px;
+  color: white;
+  font-size: 60px;
+  text-align: center;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h2 {
+    margin-bottom: 50px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+main {
+  position: relative;
+  width: 900px;
+  height: 400px;
+
+  background: rgb(127, 127, 127);
+  
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+div#game-bg {
+    background-repeat: repeat-x no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 9999vw;
+    height: 400px;
+}
+#game-bg.normal-mode {
+    background-image: url("../img/normal.png");
+}
+#game-bg.dystopie-mode {
+    background-image: url("../img/dystopie.png");
+}
+#game-bg.utopie-mode {
+    background-image: url("../img/utopie.png");
+}
+
+#back-message {
+    display: none;
+    position: absolute;
+}
+#back-message img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+#back-message h3 {
+  text-align: center;
+    font-size: 18px;
+}
+#back-message p {
+    font-size: 16px;
+    margin-top: 15px;
+    text-align: center;
+}
+.player {
+  background-image: url("../img/perso.png");
+  position: absolute;
+  width: 60px;
+  height: 100px;
+  top: 150px;
+  left: 400px;
+  z-index: 3;
+}
+.player.hide {
+  display: none;
+}
+
+.ecolo {
+  position: absolute;
+  width: 60px;
+  height: 100px;
+  top: 150px;
+  left: 330px;
+  z-index: 1;
+}
+
+#poubelle {
+  background-image: url("../img/perso.png");
+  position: absolute;
+  width: 60px;
+  height: auto;
+  top: 184px;
+  left: 1000px;
+  z-index: 1;
+}
+
+#cow {
+  background-image: url("../img/perso.png");
+  position: absolute;
+  width: 100px;
+  height: auto;
+  top: 167px;
+  left: 1500px;
+  z-index: 5;
+}
+
+.message {
+  position: absolute;
+  left: 60%;
+  top: 1%;
+  width: 300px;
+  height: 350px;
+  border: thick double #702400;
+  background-color: #ffdecf;
+  z-index: 1;
+  padding: 1vw;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.messageHide {
+    display: none;
+}
+
+.messageShow {
+    display: flex;
+}
+
+#choice {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+
+#choice > button {
+  border: none;
+  border-radius: 10px;  
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px;
+}
+
+#choice > button:hover {
+    cursor: pointer;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+#choice > button:nth-child(1) {
+    color: white;
+    background-color: #2f890c;
+}
+#choice > button:nth-child(3) {
+    color: black;
+    background-color: #f7de36;
+}
+#choice > button:nth-child(2) {
+    color: white;
+    background-color: #304d23;
+}
+#choice > button:nth-child(4) {
+    color: white;
+    background-color: black;
+}
+
+.quizz, .quizz1, .mauvaiserep, .quizzvache, .quizz2, .mauvaiserepcow {
+    display: none;
+}
+
+.displayquizz {
+  word-break: break-all;
+  font-size: 12px;
+}
+
+
+.displayquizz {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h2 {
+    color: white;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-weight: 400;
+}
+
+.theme {
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/normal.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+  position: absolute;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.themedisplay {
+  display: flex;
+}
+
+.themeno {
+  display: none;
+}
+
+.theme > h3 {
+  text-align: center;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  margin-top: 120px;
+  margin-bottom: 30px;
+}
+
+.theme > ul {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+}
+
+.theme > ul > li > button{
+  border: solid 2px #1c1c1c;  
+  padding: 13px;
+  width: 120px;
+  border-radius: 10px;
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+
+
+.theme > ul > li:nth-child(1) button{
+  background-color: #d63c3c;
+}
+.theme > ul > li:nth-child(2) button {
+  background-color: #dedede;
+}
+.theme > ul > li:nth-child(3) button {
+  background-color: #9dd67a;
+}
+.theme > ul > li > button:hover {
+  cursor: pointer;
+  background-color: #333131;
+    color: white;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid transparent;
+}
+
+
+.pop-up {
+    right: 0;
+    width: 200px;
+    height: 300px;
+    color: rgba(255, 255, 255, 1);
+    position: absolute;
+    z-index: 10;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    background-color: #1f1f1f;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+
+#continue {
+  border: none;
+  border-radius: 10px;  
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px;
+}
+
+#continue:hover {
+  cursor: pointer;
+}
+
+.fin {
+  display: none;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+.affiche {
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: column;
+  background-color: black;
+}
